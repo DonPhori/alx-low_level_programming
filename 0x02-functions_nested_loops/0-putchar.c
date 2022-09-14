@@ -7,8 +7,13 @@
  */
 int main(void)
 {
-	const char *print = "putchar";
+	char *print = "_putchar";
 
-	printf("_%s", print);
+	while (*print)
+	{
+		putchar(*print);
+		print++;
+	}
+	putchar('\n');
 	return (0);
 }
