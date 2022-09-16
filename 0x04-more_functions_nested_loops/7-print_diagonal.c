@@ -6,7 +6,7 @@
  * Return: 0
  */
 
-void print_diagonal(void)
+void print_diagonal(int n)
 {
 	int a, b;
 
