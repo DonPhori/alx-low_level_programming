@@ -20,3 +20,4 @@ char *_strcat(char *dest, char *src)
 	}
 	*ptr = *src;
 	return (dest);
+}
