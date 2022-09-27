@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memcpy: memset function
+ * _memcpy- memset function
  * @dest: start point of string to change
  * @src: value that will replace
  * @n: number of bytes to change
