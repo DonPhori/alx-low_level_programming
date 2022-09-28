@@ -1,0 +1,1 @@
+Recursion is when a function calls itself in the same function when defining it. This is used when you want to silve a problem that will require you to repeat a certain process in a similar way until you reach an exit point.
