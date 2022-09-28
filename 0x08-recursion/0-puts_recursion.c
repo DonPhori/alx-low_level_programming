@@ -3,19 +3,18 @@
 /**
  * _puts_recursion - prints a string, followed by a new line
  * @s: pointer to a string
+ *
+ * Return: On succes 1
+ * On error, -1 is returned, and errno is set appropriately
  */
 
 void _puts_recursion(char *s)
 {
-	char *x = s;
-
-	if (*x != '\0')
-	{
-		_putchar(*x);
-		x++;
-		_puts_recursion(x);
-	} else
+	if (*s == 0)
 	{
 		_putchar('\n');
+		return;
 	}
+	_putchar(*s);
+	_puts_recursion(s + 1);
 }
