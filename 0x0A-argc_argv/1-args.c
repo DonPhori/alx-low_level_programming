@@ -10,10 +10,6 @@
 
 int main(int argc, char *argv[])
 {
-	int sum = 0;
-	int i = argc;
-
-	sum += atoi(argv[i]);
-	printf("%d", sum);
+	printf("%d", argc);
 	return (0);
 }
