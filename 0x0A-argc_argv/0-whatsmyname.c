@@ -13,6 +13,6 @@ int main(int argc, char **argv)
 {
 	int i = argc = 0;
 
-	printf("argv[%d] = %s\n", i, argv[i]);
-	exit(EXIT_SUCCESS);
+	printf("%s\n", argv[i]);
+	return (0);
 }
