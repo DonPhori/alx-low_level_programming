@@ -1,9 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int change(int cents);
+
 /**
- * change - function to get change
- * @cents: amount of coins
+ * main - Entry point
+ * @argc: Argument count
+ * @argv: argument vector
+ * Return: Always 0
+ */
+
+int main(int argc, char **argv)
+{
+	if (argc != 2)
+	{
+		printf("%s\n", "Error");
+		return (1);
+	}
+	else if (argc < 0)
+	{
+		return (0);
+	}
+	printf("%d\n", change(atoi(argv[1])));
+	return (0);
+}
+
+/**
+ * change - amount of change
+ * @cents: amount of coins rturned from main
  * Return: change
  */
 
@@ -26,12 +50,12 @@ int change(int cents)
 		while (cents >= d)
 		{
 			cents -= d;
-			coins++;
+			coins++
 		}
 		while (cents >= n)
 		{
 			cents -= n;
-			coins++
+			coins++;
 		}
 		while (cents >= t)
 		{
@@ -45,26 +69,4 @@ int change(int cents)
 		}
 	}
 	return (coins);
-}
-
-/**
- * main - Entry point
- * @argc: Argument count
- * @argv: argument vector
- * Return: Always 0
- */
-
-int main(int argc, char **argv)
-{
-	if (argc != 2)
-	{
-		printf("%s\n", "Error");
-		return (1);
-	}
-	else if (argc < 0)
-	{
-		return (0);
-	}
-	printf("%d\n", change(atoi(argv[1])));
-	return (0);
 }
