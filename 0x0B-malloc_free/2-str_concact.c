@@ -10,47 +10,32 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char *ptr;
-	unsigned int x, len = 0, len2 = 0;
+	char *strnew = NULL;
+	unsigned int i;
+	int n1;
+	int n2;
+	int count;
 
-	if (!s1)
-	{
+	count = 0;
+	if (s1 == NULL)
 		s1 = "";
-	}
-	else
-	{
-		for (; s1[len1]; len1++)
-		{
-			;
-		}
-	}
-	if (!s2)
-	{
+	if (s2 == NULL)
 		s2 = "";
-	}
-	else
-	{
-		for (; s2[len2]; len2++)
-		{
-			;
-		}
-	}
-	len2++;
-	ptr = malloc((len1 + len2) * sizeof(char));
-	if (!ptr)
+	for (n1 = 0; s1[n1] != '\0'; n1++)
+		;
+	for (n2 = 0; s2[n2] != '\0'; n2++)
+		;
+	strnew = (char *)malloc((n1 + n2 + 1) * sizeof(char));
+	if (strnew == NULL)
 	{
 		return (NULL);
 	}
-	for (x = 0; x <= (len1 + len2); x++)
+	for (i = 0; s1[i] != '\0'; i++)
+		strnew[i] = s1[i];
+	for (; s2[count] != '\0'; i++)
 	{
-		if (x < len1)
-		{
-			ptr[x] = s1[x];
-		}
-		else
-		{
-			ptr[x] = s2[x - len1];
-		}
+		strnew[i] = s2[count];
+		count++;
 	}
-	return (ptr);
+	return (strnew);
 }
