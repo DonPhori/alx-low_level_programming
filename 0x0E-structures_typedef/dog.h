@@ -1,17 +1,13 @@
-#ifndef DOG_H
-#define DOG_H
+#ifndef _HEADER_
+#define _HEADER_
 
 /**
- * File: dog.h
- * Auth: Don Phori
- * Desc: Header file the a new type struct dog.
- */
-
-/**
- * struct dog - A new type describing a dog
+ * struct dog - Attributes of a dog
  * @name: The name of the dog
  * @age: The age of the dog
  * @owner: The owner of the dog
+ *
+ * Description: The atributes of a dog
  */
 
 struct dog
