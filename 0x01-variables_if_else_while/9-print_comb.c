@@ -8,14 +8,18 @@
 
 int main(void)
 {
-	char num;
+	int num = '0';
 
-	for (num = '0'; num <= '8'; num++)
+	while (num <= '9')
 	{
 		putchar(num);
-		putchar(',');
-		putchar(' ');
+		if (num != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		num++;
 	}
-	putchar('9');
+	putchar('\n');
 	return (0);
 }
