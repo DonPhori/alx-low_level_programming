@@ -3,7 +3,7 @@
 
 /**
  * print_to_98 - function to print natural numbers
- * @n: number passed to function
+ * @A: number passed to function
  *
  * Return: 1 on success
  * On error, -1 is returned, and errno is set appropriately
@@ -11,16 +11,16 @@
 void print_to_98(int n)
 {
 
-	while (n != 98)
+	while (A != 98)
 	{
-		printf("%i, ", n);
-		if (n > 98)
+		printf("%i, ", A);
+		if (A > 98)
 		{
-			n--;
+			A--;
 		}
-		else if (n < 98)
+		else if (A < 98)
 		{
-			n++;
+			A++;
 		}
 	}
 	printf("%i\n", 98);
