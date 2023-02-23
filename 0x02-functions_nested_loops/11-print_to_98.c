@@ -4,10 +4,13 @@
 /**
  * print_to_98 - function to print natural numbers
  * @n: number passed to function
+ *
+ * Return: 1 on success
+ * On error, -1 is returned, and errno is set appropriately
  */
-
 void print_to_98(int n)
 {
+
 	while (n != 98)
 	{
 		printf("%i, ", n);
