@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * times_table - function to print the multiplication table starting from 0 up to 9
+ * times_table - function to print the multiplication table
  */
 
 void times_table(void)
