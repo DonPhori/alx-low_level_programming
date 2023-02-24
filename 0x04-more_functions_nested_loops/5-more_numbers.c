@@ -9,15 +9,20 @@
 void more_numbers(void)
 {
 	int nums;
-	int times = 0;
+	int lines;
 
-	while (times < 10)
+	for (lines = 0; lines < 10; lines++)
 	{
-		for (nums = 0; nums <= 14; nums++)
+		for (nums = 0; nums < 15; nums++)
 		{
-			_putchar(nums + '0');
+			d = nums / 10;
+			u = nums % 10;
+			if (d != 0)
+			{
+				_putchar(d + '0');
+			}
+			_putchar(u + '0');
 		}
 		_putchar('\n');
-		times++
 	}
 }
