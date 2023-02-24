@@ -10,6 +10,8 @@ void more_numbers(void)
 {
 	int nums;
 	int lines;
+	int d;
+	int u;
 
 	for (lines = 0; lines < 10; lines++)
 	{
