@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-/* header file containing isdigit() function prototype */
-#include <ctype.h>
 
 /**
  * main - Start of program
@@ -12,12 +10,13 @@
 
 int main(int argc, char **argv)
 {
-	int sum, i, j, num;
+	int sum = 0;
+	int i, j, num;
 
 	if (argc < 2)
 	{
 		printf("0\n");
-		return (1);
+		return (0);
 	}
 	for (i = 1; i < argc; i++)
 	{
@@ -40,7 +39,7 @@ int main(int argc, char **argv)
 			return (1);
 		}
 		/* add num to the sum */
-		sum += num;
+		sum = sum + num;
 	}
 	/* print the total sum */
 	printf("%d\n", sum);
