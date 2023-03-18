@@ -14,13 +14,18 @@ int main(int argc, char **argv)
 {
 	int sum, i, j, num;
 
+	if (argc < 2)
+	{
+		printf("0\n");
+		return (1);
+	}
 	for (i = 1; i < argc; i++)
 	{
 		/* use nested loop to iterate through all arguments */
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			/* check if argument is not a digit */
-			if (!isdigit(argv[i][j]))
+			if (argv[i][j] < '0' || argv[i][j] > '9')
 			{
 				printf("Error\n");
 				return (1);
