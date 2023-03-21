@@ -13,6 +13,7 @@ char *_strdup(char *str)
 	/* initialize string length to 0 */
 	unsigned int length = 0;
 	unsigned int i;
+	char *new_str;
 
 	if (str[length] == '\0')
 	{
@@ -24,7 +25,7 @@ char *_strdup(char *str)
 		length++;
 	}
 	/* allocate memory for the new str */
-	char *new_str = (char *) malloc(length + 1);
+	*new_str = (char *) malloc(length + 1);
 	/* make sure memory was allocated */
 	if (new_str != NULL)
 	{
