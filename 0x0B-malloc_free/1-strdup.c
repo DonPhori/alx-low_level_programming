@@ -25,7 +25,7 @@ char *_strdup(char *str)
 		length++;
 	}
 	/* allocate memory for the new str */
-	*new_str = (char *) malloc(length + 1);
+	new_str = malloc(length + 1);
 	/* make sure memory was allocated */
 	if (new_str != NULL)
 	{
