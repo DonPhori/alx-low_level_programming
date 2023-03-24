@@ -14,6 +14,7 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i;
 	unsigned int len1 = 0;
 	unsigned int len2 = 0;
+	char *result;
 
 	/* replace string with an empty string if it is NULL */
 	if (s1 == NULL)
@@ -27,7 +28,7 @@ char *str_concat(char *s1, char *s2)
 	while (s2[len2] != '\0')
 		len2++;
 	/* reserve memory for the result of the concatenated strings */
-	char *result = (char *) malloc((len1 + len2 + 1) * sizeof(char));
+	result = malloc((len1 + len2 + 1) * sizeof(char));
 	/* check if memory has been allocate return NULL if failed to allocate */
 	if (result == NULL)
 		return (NULL);
